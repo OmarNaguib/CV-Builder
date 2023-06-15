@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import updateObjectUsingPath from "./Utils/set";
+import Input from "./Components/Input";
 
 class App extends Component {
   constructor(props) {
@@ -9,12 +10,13 @@ class App extends Component {
       email: "",
       phoneNumber: "",
       education: [],
-      work: [],
+      work: [{}],
     };
   }
   // that updates any nested property inside the state with the provided value
   updateStateProperty = (path, value) => {
     this.setState((prevState) => updateObjectUsingPath(prevState, path, value));
+    console.log(this.state);
   };
   newEducation = () => {
     this.state.education.push({});
@@ -25,7 +27,14 @@ class App extends Component {
   };
 
   render() {
-    return <div></div>;
+    return (
+      <div>
+        <Input
+          path={["work", "0", "name"]}
+          updateFunction={this.updateStateProperty}
+        ></Input>
+      </div>
+    );
   }
 }
 
