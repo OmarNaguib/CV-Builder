@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import updateObjectUsingPath from "./Utils/set";
 import Input from "./Components/Input";
+import Inputs from "./Components/Inputs";
 
 class App extends Component {
   constructor(props) {
@@ -29,10 +30,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Input
-          path={["work", "0", "name"]}
-          updateFunction={this.updateStateProperty}
-        ></Input>
+        <Inputs updateFunction={this.updateStateProperty}></Inputs>
       </div>
     );
   }

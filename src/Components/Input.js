@@ -9,7 +9,6 @@ export default class Input extends Component {
         <input
           id={path.join("-")}
           type="text"
-          defaultValue={path[path.length - 1]}
           onChange={(e) => {
             updateFunction(path, e.target.value);
           }}
