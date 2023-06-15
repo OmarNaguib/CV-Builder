@@ -1,14 +1,16 @@
 import React, { Component } from "react";
-import Input from "./Input";
+import GeneralInfo from "./generalInfo";
+import Education from "./Education";
+import Work from "./Work";
 
 export default class Inputs extends Component {
   render() {
     const { updateFunction } = this.props;
     return (
       <div className="inputs">
-        <Input path={["name"]} updateFunction={updateFunction}></Input>
-        <Input path={["email"]} updateFunction={updateFunction}></Input>
-        <Input path={["phoneNumber"]} updateFunction={updateFunction}></Input>
+        <GeneralInfo updateFunction={updateFunction}></GeneralInfo>
+        <Education></Education>
+        <Work></Work>
       </div>
     );
   }
