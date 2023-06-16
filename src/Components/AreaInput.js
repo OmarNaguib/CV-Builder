@@ -15,8 +15,6 @@ export default class AreaInput extends Component {
         <label htmlFor={path.join("-")}>{label + ": "}</label>
         <textarea
           id={path.join("-")}
-          cols="30"
-          rows="10"
           onBlur={(e) => {
             e.preventDefault();
             updateFunction(path, e.target.value);

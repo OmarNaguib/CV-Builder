@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import updateObjectUsingPath from "./Utils/set";
 import Inputs from "./Components/Inputs";
+import Display from "./Components/Display";
+import "./App.css";
 
 class App extends Component {
   constructor(props) {
@@ -34,13 +36,14 @@ class App extends Component {
 
   render() {
     return (
-      <div>
+      <div className="app">
         <Inputs
           updateFunction={this.updateStateProperty}
           newWork={this.newWork}
           newEducation={this.newEducation}
           state={this.state}
         ></Inputs>
+        <Display></Display>
       </div>
     );
   }
