@@ -1,10 +1,6 @@
 import React, { Component } from "react";
 
 export default class AreaInput extends Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     const { path, updateFunction } = this.props;
     const label = path[path.length - 1]
