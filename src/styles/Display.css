@@ -1,0 +1,18 @@
+.display {
+  padding: 30px;
+  display: grid;
+  grid-template-rows: 100px 1fr 1fr;
+}
+
+.general-display {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  border-bottom: 2px solid black;
+}
+
+.name-display {
+  font-weight: 700;
+  font-size: 30px;
+}
