@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import get from "../Utils/get";
+import get from "../../Utils/get";
 
-export default class AreaInput extends Component {
+export default class Input extends Component {
   render() {
     const { path, updateFunction, data } = this.props;
     const value = get(data, path);
@@ -9,18 +9,18 @@ export default class AreaInput extends Component {
       .split(/(?=[A-Z])/)
       .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
       .join(" ");
-
     return (
       <div className="input">
         <label htmlFor={path.join("-")}>{label + ": "}</label>
-        <textarea
+        <input
           id={path.join("-")}
+          type="text"
           onBlur={(e) => {
             e.preventDefault();
             updateFunction(path, e.target.value);
           }}
           defaultValue={value}
-        ></textarea>
+        />
       </div>
     );
   }

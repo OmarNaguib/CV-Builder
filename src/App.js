@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import updateObjectUsingPath from "./Utils/set";
-import Inputs from "./Components/Inputs";
-import Display from "./Components/Display";
+import Inputs from "./Components/input/Inputs";
+import Display from "./Components/display/Display";
 import "./App.css";
 
 class App extends Component {
@@ -43,7 +43,7 @@ class App extends Component {
           newEducation={this.newEducation}
           state={this.state}
         ></Inputs>
-        <Display></Display>
+        <Display data={this.state}></Display>
       </div>
     );
   }
