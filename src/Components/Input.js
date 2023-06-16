@@ -1,8 +1,10 @@
 import React, { Component } from "react";
+import get from "../Utils/get";
 
 export default class Input extends Component {
   render() {
-    const { path, updateFunction } = this.props;
+    const { path, updateFunction, data } = this.props;
+    const value = get(data, path);
     const label = path[path.length - 1]
       .split(/(?=[A-Z])/)
       .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
@@ -13,9 +15,11 @@ export default class Input extends Component {
         <input
           id={path.join("-")}
           type="text"
-          onChange={(e) => {
+          onBlur={(e) => {
+            e.preventDefault();
             updateFunction(path, e.target.value);
           }}
+          defaultValue={value}
         />
       </div>
     );

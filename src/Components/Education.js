@@ -5,20 +5,23 @@ import uniqid from "uniqid";
 export default class Education extends Component {
   render() {
     const { updateFunction, data, newEducation } = this.props;
-    const list = data.map((item, index) => {
+    const list = data.education.map((item, index) => {
       return (
         <li key={uniqid()}>
           <Input
             path={["education", index, "schoolName"]}
             updateFunction={updateFunction}
+            data={data}
           ></Input>
           <Input
             path={["education", index, "studyType"]}
             updateFunction={updateFunction}
+            data={data}
           ></Input>
           <Input
             path={["education", index, "finishDate"]}
             updateFunction={updateFunction}
+            data={data}
           ></Input>
         </li>
       );

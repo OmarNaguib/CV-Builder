@@ -4,21 +4,18 @@ import Education from "./Education";
 import Work from "./Work";
 
 export default class Inputs extends Component {
-  constructor(props) {
-    super(props);
-  }
   render() {
     const { updateFunction, state, newEducation, newWork } = this.props;
     return (
       <div className="inputs">
-        <GeneralInfo updateFunction={updateFunction}></GeneralInfo>
+        <GeneralInfo updateFunction={updateFunction} data={state}></GeneralInfo>
         <Education
-          data={state.education}
+          data={state}
           updateFunction={updateFunction}
           newEducation={newEducation}
         ></Education>
         <Work
-          data={state.work}
+          data={state}
           updateFunction={updateFunction}
           newWork={newWork}
         ></Work>

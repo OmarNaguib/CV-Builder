@@ -6,31 +6,34 @@ import AreaInput from "./AreaInput";
 export default class Work extends Component {
   render() {
     const { updateFunction, data, newWork } = this.props;
-    const list = data.map((item, index) => {
+    const list = data.work.map((item, index) => {
       return (
         <li key={uniqid()}>
           <Input
             path={["work", index, "company"]}
             updateFunction={updateFunction}
+            data={data}
           ></Input>
           <Input
             path={["work", index, "position"]}
             updateFunction={updateFunction}
+            data={data}
           ></Input>
           <Input
             path={["work", index, "startingDate"]}
             updateFunction={updateFunction}
+            data={data}
           ></Input>
 
           <Input
             path={["work", index, "finishDate"]}
             updateFunction={updateFunction}
+            data={data}
           ></Input>
           <AreaInput
             path={["work", index, "jobDescription"]}
             updateFunction={updateFunction}
-            value={data[index].jobDescription}
-            key={"jobdes" + index}
+            data={data}
           ></AreaInput>
         </li>
       );
