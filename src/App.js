@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import updateObjectUsingPath from "./Utils/set";
-import Input from "./Components/Input";
 import Inputs from "./Components/Inputs";
 
 class App extends Component {
@@ -20,17 +19,28 @@ class App extends Component {
     console.log(this.state);
   };
   newEducation = () => {
-    this.state.education.push({});
+    this.setState((prevState) => {
+      return { education: prevState.education.concat({}) };
+    });
+    return this.state.education.length;
   };
 
   newWork = () => {
-    this.state.work.push({});
+    this.setState((prevState) => {
+      return { work: prevState.work.concat({}) };
+    });
+    return this.state.work.length;
   };
 
   render() {
     return (
       <div>
-        <Inputs updateFunction={this.updateStateProperty}></Inputs>
+        <Inputs
+          updateFunction={this.updateStateProperty}
+          newWork={this.newWork}
+          newEducation={this.newEducation}
+          state={this.state}
+        ></Inputs>
       </div>
     );
   }
