@@ -18,7 +18,7 @@ export default class Inputs extends Component {
           newEducation={newEducation}
         ></Education>
         <Work
-          data={state.Work}
+          data={state.work}
           updateFunction={updateFunction}
           newWork={newWork}
         ></Work>

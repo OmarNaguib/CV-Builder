@@ -10,7 +10,7 @@ class App extends Component {
       email: "",
       phoneNumber: "",
       education: [],
-      work: [{}],
+      work: [],
     };
   }
   // that updates any nested property inside the state with the provided value
