@@ -6,10 +6,11 @@ export default class WorkDisplay extends Component {
     const displayList = work.map((item) => {
       return (
         <li className="work-display-instance">
-          <div className="company">{item.company}</div>
-          <div className="position">{item.position}</div>
-          <div className="start-date">{item.startDate}</div>
-          <div className="finish-date">{item.finishDate}</div>
+          <div className="company">{"• " + item.company}</div>
+          <div className="position">{"- " + item.position}</div>
+          <div className="dates">
+            {item.startingDate + " - " + item.finishDate}
+          </div>
           <div className="job-description">{item.jobDescription}</div>
         </li>
       );
