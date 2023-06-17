@@ -1,11 +1,12 @@
 import React, { Component } from "react";
+import uniqid from "uniqid";
 
 export default class WorkDisplay extends Component {
   render() {
     const { work } = this.props.data;
     const displayList = work.map((item) => {
       return (
-        <li className="work-display-instance">
+        <li className="work-display-instance" key={uniqid()}>
           <div className="company">{"• " + item.company}</div>
           <div className="position">{"- " + item.position}</div>
           <div className="dates">
