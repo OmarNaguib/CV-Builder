@@ -67,16 +67,19 @@ class App extends Component {
 
   render() {
     return (
-      <div className="app">
-        <Inputs
-          updateFunction={this.updateStateProperty}
-          newWork={this.newWork}
-          newEducation={this.newEducation}
-          state={this.state}
-        ></Inputs>
-        <Display data={this.state}></Display>
-        <button onClick={this.buttonClick}>Submit</button>
-      </div>
+      <>
+        <header>CV Builder</header>
+        <div className="app">
+          <Inputs
+            updateFunction={this.updateStateProperty}
+            newWork={this.newWork}
+            newEducation={this.newEducation}
+            state={this.state}
+          ></Inputs>
+          <Display data={this.state}></Display>
+          <button onClick={this.buttonClick}>Submit</button>
+        </div>
+      </>
     );
   }
 }
