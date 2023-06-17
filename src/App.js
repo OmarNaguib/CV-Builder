@@ -48,6 +48,23 @@ class App extends Component {
     return this.state.work.length;
   };
 
+  buttonClick = (e) => {
+    console.log("here");
+    const inputs = document.querySelector(".inputs");
+
+    const display = document.querySelector(".display");
+    console.log(display);
+    if (e.target.textContent === "Submit") {
+      inputs.classList.add("hidden");
+      display.classList.add("only");
+      e.target.textContent = "Edit";
+    } else if (e.target.textContent === "Edit") {
+      inputs.classList.remove("hidden");
+      display.classList.remove("only");
+      e.target.textContent = "Submit";
+    }
+  };
+
   render() {
     return (
       <div className="app">
@@ -58,6 +75,7 @@ class App extends Component {
           state={this.state}
         ></Inputs>
         <Display data={this.state}></Display>
+        <button onClick={this.buttonClick}>Submit</button>
       </div>
     );
   }
