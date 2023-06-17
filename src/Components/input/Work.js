@@ -42,7 +42,7 @@ export default class Work extends Component {
       <div className="work">
         <h1>Work Experience</h1>
         <ul>{list}</ul>
-        <button onClick={newWork}>new+</button>
+        <button onClick={newWork}>+ Add Experience</button>
       </div>
     );
   }

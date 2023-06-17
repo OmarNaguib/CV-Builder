@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import GeneralInfo from "./generalInfo";
 import Education from "./Education";
 import Work from "./Work";
+import "../../styles/Inputs.css";
 
 export default class Inputs extends Component {
   render() {

@@ -30,7 +30,7 @@ export default class Education extends Component {
       <div className="education">
         <h1>Education</h1>
         <ul>{list}</ul>
-        <button onClick={newEducation}>new+</button>
+        <button onClick={newEducation}>+ Add degree</button>
       </div>
     );
   }
