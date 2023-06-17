@@ -36,7 +36,13 @@ class App extends Component {
   newWork = () => {
     this.setState((prevState) => {
       return {
-        work: prevState.work.concat({}),
+        work: prevState.work.concat({
+          company: "",
+          position: "",
+          startingDate: "",
+          finishDate: "",
+          jobDescription: "",
+        }),
       };
     });
     return this.state.work.length;
