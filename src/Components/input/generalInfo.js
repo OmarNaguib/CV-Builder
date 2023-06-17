@@ -7,21 +7,23 @@ export default class GeneralInfo extends Component {
     return (
       <div className="general-info">
         <h1>General Info</h1>
-        <Input
-          path={["name"]}
-          updateFunction={updateFunction}
-          data={data}
-        ></Input>
-        <Input
-          path={["email"]}
-          updateFunction={updateFunction}
-          data={data}
-        ></Input>
-        <Input
-          path={["phoneNumber"]}
-          updateFunction={updateFunction}
-          data={data}
-        ></Input>
+        <div className="info">
+          <Input
+            path={["name"]}
+            updateFunction={updateFunction}
+            data={data}
+          ></Input>
+          <Input
+            path={["email"]}
+            updateFunction={updateFunction}
+            data={data}
+          ></Input>
+          <Input
+            path={["phoneNumber"]}
+            updateFunction={updateFunction}
+            data={data}
+          ></Input>
+        </div>
       </div>
     );
   }

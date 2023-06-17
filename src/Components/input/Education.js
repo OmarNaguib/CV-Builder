@@ -8,21 +8,23 @@ export default class Education extends Component {
     const list = data.education.map((item, index) => {
       return (
         <li key={uniqid()}>
-          <Input
-            path={["education", index, "schoolName"]}
-            updateFunction={updateFunction}
-            data={data}
-          ></Input>
-          <Input
-            path={["education", index, "studyType"]}
-            updateFunction={updateFunction}
-            data={data}
-          ></Input>
-          <Input
-            path={["education", index, "finishDate"]}
-            updateFunction={updateFunction}
-            data={data}
-          ></Input>
+          <div className="education-instance">
+            <Input
+              path={["education", index, "schoolName"]}
+              updateFunction={updateFunction}
+              data={data}
+            ></Input>
+            <Input
+              path={["education", index, "studyType"]}
+              updateFunction={updateFunction}
+              data={data}
+            ></Input>
+            <Input
+              path={["education", index, "finishDate"]}
+              updateFunction={updateFunction}
+              data={data}
+            ></Input>
+          </div>
         </li>
       );
     });

@@ -9,39 +9,40 @@ export default class Work extends Component {
     const list = data.work.map((item, index) => {
       return (
         <li key={uniqid()}>
-          <Input
-            path={["work", index, "company"]}
-            updateFunction={updateFunction}
-            data={data}
-          ></Input>
-          <Input
-            path={["work", index, "position"]}
-            updateFunction={updateFunction}
-            data={data}
-          ></Input>
-          <Input
-            path={["work", index, "startingDate"]}
-            updateFunction={updateFunction}
-            data={data}
-          ></Input>
-
-          <Input
-            path={["work", index, "finishDate"]}
-            updateFunction={updateFunction}
-            data={data}
-          ></Input>
-          <AreaInput
-            path={["work", index, "jobDescription"]}
-            updateFunction={updateFunction}
-            data={data}
-          ></AreaInput>
+          <div className="work-instance">
+            <Input
+              path={["work", index, "company"]}
+              updateFunction={updateFunction}
+              data={data}
+            ></Input>
+            <Input
+              path={["work", index, "position"]}
+              updateFunction={updateFunction}
+              data={data}
+            ></Input>
+            <Input
+              path={["work", index, "startingDate"]}
+              updateFunction={updateFunction}
+              data={data}
+            ></Input>
+            <Input
+              path={["work", index, "finishDate"]}
+              updateFunction={updateFunction}
+              data={data}
+            ></Input>
+            <AreaInput
+              path={["work", index, "jobDescription"]}
+              updateFunction={updateFunction}
+              data={data}
+            ></AreaInput>
+          </div>
         </li>
       );
     });
     return (
       <div className="work">
         <h1>Work Experience</h1>
-        <ul>{list}</ul>
+        <ol>{list}</ol>
         <button onClick={newWork}>+ Add Experience</button>
       </div>
     );
