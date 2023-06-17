@@ -7,7 +7,7 @@ import "../../styles/Display.css";
 export default class Display extends Component {
   render() {
     return (
-      <div className="display">
+      <div className="display hidden">
         <GeneralDisplay data={this.props.data}></GeneralDisplay>
         <EducationDisplay data={this.props.data}></EducationDisplay>
         <WorkDisplay data={this.props.data}></WorkDisplay>

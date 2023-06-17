@@ -56,11 +56,11 @@ class App extends Component {
     console.log(display);
     if (e.target.textContent === "Submit") {
       inputs.classList.add("hidden");
-      display.classList.add("only");
+      display.classList.remove("hidden");
       e.target.textContent = "Edit";
     } else if (e.target.textContent === "Edit") {
       inputs.classList.remove("hidden");
-      display.classList.remove("only");
+      display.classList.add("hidden");
       e.target.textContent = "Submit";
     }
   };
