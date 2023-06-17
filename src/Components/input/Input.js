@@ -16,7 +16,6 @@ export default class Input extends Component {
           id={path.join("-")}
           type="text"
           onBlur={(e) => {
-            e.preventDefault();
             updateFunction(path, e.target.value);
           }}
           defaultValue={value}

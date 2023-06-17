@@ -16,7 +16,6 @@ export default class AreaInput extends Component {
         <textarea
           id={path.join("-")}
           onBlur={(e) => {
-            e.preventDefault();
             updateFunction(path, e.target.value);
           }}
           defaultValue={value}
