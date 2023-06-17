@@ -1,7 +1,7 @@
 .display {
   padding: 30px;
   display: grid;
-  grid-template-rows: 100px 1fr 1fr;
+  grid-template-rows: 100px minmax(200px, 1fr) minmax(200px, 1fr);
 }
 
 .general-display {
@@ -9,10 +9,32 @@
   flex-direction: column;
   align-items: center;
   gap: 3px;
-  border-bottom: 2px solid black;
 }
 
 .name-display {
   font-weight: 700;
   font-size: 30px;
+}
+h2 {
+  border-bottom: solid 2px black;
+}
+.education-display {
+  align-self: start;
+}
+
+.education-display-instance {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 70px;
+  align-content: center;
+  align-items: center;
+  gap: 15px;
+}
+.school-name {
+  font-weight: 700;
+  font-size: 22px;
+}
+.finish-date {
+  font-weight: 700;
 }
