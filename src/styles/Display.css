@@ -3,7 +3,6 @@
   padding: 30px;
   display: grid;
   grid-template-rows: 100px minmax(200px, 1fr) minmax(200px, 1fr);
-  background-color: white;
 }
 
 .general-display {
