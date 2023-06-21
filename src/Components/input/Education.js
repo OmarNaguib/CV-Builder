@@ -1,12 +1,11 @@
 import React from "react";
 import Input from "./Input";
-import uniqid from "uniqid";
 
 export default function education(props) {
   const { updateFunction, data, newEducation } = props;
   const list = data.education.map((item, index) => {
     return (
-      <li key={uniqid()}>
+      <li key={"education" + index}>
         <div className="education-instance">
           <Input
             path={["education", index, "schoolName"]}

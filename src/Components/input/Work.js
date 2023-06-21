@@ -1,13 +1,12 @@
 import React from "react";
 import Input from "./Input";
-import uniqid from "uniqid";
 import AreaInput from "./AreaInput";
 
 export default function Work(props) {
   const { updateFunction, data, newWork } = props;
   const list = data.work.map((item, index) => {
     return (
-      <li key={uniqid()}>
+      <li key={"work" + index}>
         <div className="work-instance">
           <Input
             path={["work", index, "company"]}
