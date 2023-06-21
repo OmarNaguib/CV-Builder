@@ -1,17 +1,15 @@
-import React, { Component } from "react";
+import React from "react";
 import GeneralDisplay from "./GeneralDisplay";
 import EducationDisplay from "./EducationDisplay";
 import WorkDisplay from "./WorkDisplay";
 import "../../styles/Display.css";
 
-export default class Display extends Component {
-  render() {
-    return (
-      <div className="display hidden">
-        <GeneralDisplay data={this.props.data}></GeneralDisplay>
-        <EducationDisplay data={this.props.data}></EducationDisplay>
-        <WorkDisplay data={this.props.data}></WorkDisplay>
-      </div>
-    );
-  }
+export default function Display(props) {
+  return (
+    <div className="display hidden">
+      <GeneralDisplay data={props.data}></GeneralDisplay>
+      <EducationDisplay data={props.data}></EducationDisplay>
+      <WorkDisplay data={props.data}></WorkDisplay>
+    </div>
+  );
 }
