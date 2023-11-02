@@ -1,5 +1,8 @@
-export default function get(object: object, path: string[]): string {
-  return path.reduce((prev, curr) => {
+import { State } from "../types";
+
+
+export default function get(object: State, path: string[]): string {
+  return path.reduce((prev:any, curr) => {
     return prev[curr];
   }, object);
 }

@@ -3,7 +3,7 @@ import { State } from "../../types";
 
 export default function education(props: EducationProps) {
   const { updateFunction, data, newEducation } = props;
-  const list = data.education.map((item, index) => {
+  const list = data.education.map((_item, index) => {
     const stringIndex = "" + index;
     return (
       <li key={"education" + index}>

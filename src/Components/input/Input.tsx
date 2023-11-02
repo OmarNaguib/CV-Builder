@@ -1,4 +1,3 @@
-import React from "react";
 import get from "../../Utils/get";
 import { State } from "../../types";
 

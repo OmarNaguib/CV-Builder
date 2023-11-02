@@ -1,10 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;600;700&family=Tinos:wght@400;700&display=swap");
+
 html,
 body {
   margin: 0px !important;
   padding: 0px !important;
   background-color: #dbeafe;
 }
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;600;700&family=Tinos:wght@400;700&display=swap");
 header {
   height: 50px;
   display: flex;

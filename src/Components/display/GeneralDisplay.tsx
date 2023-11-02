@@ -1,6 +1,6 @@
-import React from "react";
+import { State } from "../../types";
 
-export default function GeneralDisplay(props) {
+export default function GeneralDisplay(props:{data:State}) {
   const { name, email, phoneNumber } = props.data;
   return (
     <div className="general-display">

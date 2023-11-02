@@ -4,7 +4,7 @@ import { State } from "../../types";
 
 export default function Work(props: WorkProps) {
   const { updateFunction, data, newWork } = props;
-  const list = data.work.map((item, index) => {
+  const list = data.work.map((_item, index) => {
     const stringIndex = "" + index;
     return (
       <li key={"work" + index}>
