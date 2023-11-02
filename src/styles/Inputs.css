@@ -1,0 +1,52 @@
+div > .inputs {
+  width: 800px;
+  display: grid;
+}
+h1 {
+  margin: 0;
+  margin-bottom: 30px;
+  border-bottom: 2px solid black;
+}
+
+button {
+  color: #2563eb;
+  background: none;
+  border: none;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0px 30px;
+}
+label {
+  font-size: 16px;
+  font-weight: bold;
+  width: 120px;
+  display: block;
+}
+input {
+  width: 300px;
+  font-size: 16px;
+}
+ul,
+ol {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.education-instance,
+.work-instance {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0px 30px;
+}
+
+textarea {
+  width: 700px;
+  height: 200px;
+}

@@ -1,0 +1,58 @@
+html,
+body {
+  margin: 0px !important;
+  padding: 0px !important;
+  background-color: #dbeafe;
+}
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;600;700&family=Tinos:wght@400;700&display=swap");
+header {
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  color: white;
+  background-color: #2563eb;
+  font-family: "Roboto Slab", serif;
+}
+.app {
+  padding-top: 15px;
+  display: grid;
+  /* grid-template-columns: repeat(2, 1fr); */
+  grid-template-rows: 1fr 50px;
+  align-items: flex-start;
+  justify-content: space-around;
+  gap: 10px 100px;
+  width: 100%;
+  font-family: "Tinos", serif;
+}
+
+.app > div {
+  min-height: 775.5px;
+  border: 3px solid black;
+  padding: 30px;
+  place-self: center;
+  background-color: white;
+}
+
+.app > button {
+  grid-row: 2/3;
+  place-self: center;
+  background-color: #2563eb;
+  border: none;
+  color: white;
+  height: 50px;
+  width: 100px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.inputs {
+  display: grid;
+}
+
+div > .hidden {
+  display: none;
+}
